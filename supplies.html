@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplies - Arcega Marketing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-card {
+            height: 100%;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        .product-description {
+            flex-grow: 1;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .price {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                margin-bottom: 15px;
+            }
+            .product-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                Arcega Marketing
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="supplies.html">Supplies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <a href="index.html" class="btn btn-secondary mb-4">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Home
+                </a>
+                <h1 class="text-center mb-4">Our Supplies</h1>
+                <!-- Category Filters -->
+                <div class="text-center mb-4">
+                    <div class="btn-group">
+                        <button class="btn btn-primary active" data-category="all">All Items</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row g-4" id="products-container">
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/sand.png" class="card-img-top product-image" alt="Sand">
+                    <div class="card-body">
+                        <h5 class="card-title">Sand</h5>
+                        <p class="product-description">Fine-grain construction sand, perfect for concrete mixing, masonry work, and general construction. Properly graded for optimal workability and strength.</p>
+                        <p class="price">₱1,000</p>
+                        <button class="btn btn-primary view-detail" data-name="Sand" data-price="₱1,000">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/gravel.jpg" class="card-img-top product-image" alt="3/4 Gravel">
+                    <div class="card-body">
+                        <h5 class="card-title">3/4 Gravel</h5>
+                        <p class="product-description">3/4 inch crushed gravel, ideal for concrete mixing, drainage applications, and base material. Provides excellent strength and durability for construction projects.</p>
+                        <p class="price">₱1,200</p>
+                        <button class="btn btn-primary view-detail" data-name="3/4 Gravel" data-price="₱1,200">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/g1.jpg" class="card-img-top product-image" alt="G1">
+                    <div class="card-body">
+                        <h5 class="card-title">G1</h5>
+                        <p class="product-description">Grade 1 construction aggregate, suitable for heavy-duty applications. Excellent for road base, foundation work, and large-scale construction projects.</p>
+                        <p class="price">₱1,200</p>
+                        <button class="btn btn-primary view-detail" data-name="G1" data-price="₱1,200">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/filling.jpg" class="card-img-top product-image" alt="Filling">
+                    <div class="card-body">
+                        <h5 class="card-title">Filling</h5>
+                        <p class="product-description">Quality fill material for site preparation, leveling, and backfilling. Ensures proper ground stability and drainage for construction projects.</p>
+                        <p class="price">₱350</p>
+                        <button class="btn btn-primary view-detail" data-name="Filling" data-price="₱350">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/readymix.jpg" class="card-img-top product-image" alt="Readymix">
+                    <div class="card-body">
+                        <h5 class="card-title">Readymix</h5>
+                        <p class="product-description">Pre-mixed concrete solution, ready for immediate use. Ensures consistent quality and strength for all construction applications.</p>
+                        <p class="price">₱1,000</p>
+                        <button class="btn btn-primary view-detail" data-name="Readymix" data-price="₱1,000">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/chm4.jpg" class="card-img-top product-image" alt="CHM4''">
+                    <div class="card-body">
+                        <h5 class="card-title">CHM4''</h5>
+                        <p class="product-description">4-inch Concrete Hollow Blocks, ideal for non-load bearing walls and partitions. Manufactured to meet industry standards for strength and durability.</p>
+                        <p class="price">₱16</p>
+                        <button class="btn btn-primary view-detail" data-name="CHM4''" data-price="₱16">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/chm6.jpg" class="card-img-top product-image" alt="CHM6''">
+                    <div class="card-body">
+                        <h5 class="card-title">CHM6''</h5>
+                        <p class="product-description">6-inch Concrete Hollow Blocks, perfect for load-bearing walls and structural applications. Provides excellent strength and sound insulation.</p>
+                        <p class="price">₱22</p>
+                        <button class="btn btn-primary view-detail" data-name="CHM6''" data-price="₱22">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/10mm.jpg" class="card-img-top product-image" alt="10MM">
+                    <div class="card-body">
+                        <h5 class="card-title">10MM</h5>
+                        <p class="product-description">10mm reinforcement steel bars, essential for concrete structural work. High-strength steel ensures durability and structural integrity.</p>
+                        <p class="price">₱142</p>
+                        <button class="btn btn-primary view-detail" data-name="10MM" data-price="₱142">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/9mm.jpg" class="card-img-top product-image" alt="9MM">
+                    <div class="card-body">
+                        <h5 class="card-title">9MM</h5>
+                        <p class="product-description">9mm reinforcement steel bars, suitable for lighter structural applications and mesh work. Provides reliable strength for concrete reinforcement.</p>
+                        <p class="price">₱105</p>
+                        <button class="btn btn-primary view-detail" data-name="9MM" data-price="₱105">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/12mm.jpg" class="card-img-top product-image" alt="12MM">
+                    <div class="card-body">
+                        <h5 class="card-title">12MM</h5>
+                        <p class="product-description">12mm reinforcement steel bars, ideal for heavy-duty structural applications. Superior strength for major construction projects.</p>
+                        <p class="price">₱200</p>
+                        <button class="btn btn-primary view-detail" data-name="12MM" data-price="₱200">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/16mm.jpg" class="card-img-top product-image" alt="16MM">
+                    <div class="card-body">
+                        <h5 class="card-title">16MM</h5>
+                        <p class="product-description">16mm reinforcement steel bars for major structural elements. Maximum strength for critical load-bearing applications.</p>
+                        <p class="price">₱355</p>
+                        <button class="btn btn-primary view-detail" data-name="16MM" data-price="₱355">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/cocolumber.jpg" class="card-img-top product-image" alt="Coco Lumber">
+                    <div class="card-body">
+                        <h5 class="card-title">Coco Lumber</h5>
+                        <p class="product-description">Sustainable coconut lumber, perfect for temporary construction work and light framing. Eco-friendly alternative with good durability.</p>
+                        <p class="price">₱30 bdft</p>
+                        <button class="btn btn-primary view-detail" data-name="Coco Lumber" data-price="₱30 bdft">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/goodlumber.jpg" class="card-img-top product-image" alt="Good Lumber">
+                    <div class="card-body">
+                        <h5 class="card-title">Good Lumber</h5>
+                        <p class="product-description">High-quality construction lumber, kiln-dried and graded for construction use. Ideal for framing, finishing, and general carpentry work.</p>
+                        <p class="price">₱45 bdft</p>
+                        <button class="btn btn-primary view-detail" data-name="Good Lumber" data-price="₱45 bdft">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/opw1.jpg" class="card-img-top product-image" alt="OPW 1/4">
+                    <div class="card-body">
+                        <h5 class="card-title">OPW 1/4</h5>
+                        <p class="product-description">1/4-inch Ordinary Plywood, suitable for general construction and backing applications. Cost-effective solution for non-exposed areas.</p>
+                        <p class="price">₱380</p>
+                        <button class="btn btn-primary view-detail" data-name="OPW 1/4" data-price="₱380">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/mpw.jpg" class="card-img-top product-image" alt="MPW1/4">
+                    <div class="card-body">
+                        <h5 class="card-title">MPW1/4</h5>
+                        <p class="product-description">1/4-inch Marine Plywood, water-resistant and ideal for areas exposed to moisture. Superior durability and weather resistance.</p>
+                        <p class="price">₱480</p>
+                        <button class="btn btn-primary view-detail" data-name="MPW1/4" data-price="₱480">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/opw2.jpg" class="card-img-top product-image" alt="OPW1/2">
+                    <div class="card-body">
+                        <h5 class="card-title">OPW1/2</h5>
+                        <p class="product-description">1/2-inch Ordinary Plywood, perfect for general construction and interior applications. Provides good strength and stability.</p>
+                        <p class="price">₱720</p>
+                        <button class="btn btn-primary view-detail" data-name="OPW1/2" data-price="₱720">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/mpw2.jpg" class="card-img-top product-image" alt="MPW1/2">
+                    <div class="card-body">
+                        <h5 class="card-title">MPW1/2</h5>
+                        <p class="product-description">1/2-inch Marine Plywood, highly durable and moisture-resistant. Ideal for exterior applications and wet areas.</p>
+                        <p class="price">₱880</p>
+                        <button class="btn btn-primary view-detail" data-name="MPW1/2" data-price="₱880">View Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="productDetailModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-image-container">
+                                <img id="modalProductImage" src="" alt="" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductName" class="mb-3"></h3>
+                            <div class="product-price mb-3">
+                                <span class="price-label">Price:</span>
+                                <span id="modalProductPrice" class="price-amount"></span>
+                            </div>
+                            <div class="product-description mb-4">
+                                <h5>Description</h5>
+                                <p id="modalProductDescription"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
