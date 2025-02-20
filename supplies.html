@@ -45,6 +45,23 @@
                 height: 180px;
             }
         }
+        .variants-container {
+            margin-top: 20px;
+        }
+        .variant-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        .variant-name {
+            font-weight: 500;
+        }
+        .variant-price {
+            color: #0d6efd;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -118,7 +135,7 @@
                 <div class="card product-card">
                     <img src="assets/g1.jpg" class="card-img-top product-image" alt="G1">
                     <div class="card-body">
-                        <h5 class="card-title">G1</h5>
+                        <h5 class="card-title">G1 Gravel</h5>
                         <p class="product-description">Grade 1 construction aggregate, suitable for heavy-duty applications. Excellent for road base, foundation work, and large-scale construction projects.</p>
                         <p class="price">₱1,200</p>
                         <button class="btn btn-primary view-detail" data-name="G1" data-price="₱1,200">View Detail</button>
@@ -149,9 +166,20 @@
             </div>
             <div class="col-md-4 col-lg-3">
                 <div class="card product-card">
+                    <img src="assets/dakal2.jpg" class="card-img-top product-image" alt="Dakal2">
+                    <div class="card-body">
+                        <h5 class="card-title">Dakal2</h5>
+                        <p class="product-description">Quality Dakal2 material for your construction needs.</p>
+                        <p class="price">₱750</p>
+                        <button class="btn btn-primary view-detail" data-name="Dakal2" data-price="₱750">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
                     <img src="assets/chm4.jpg" class="card-img-top product-image" alt="CHM4''">
                     <div class="card-body">
-                        <h5 class="card-title">CHM4''</h5>
+                        <h5 class="card-title">Concrete Hollow Blocks 4''</h5>
                         <p class="product-description">4-inch Concrete Hollow Blocks, ideal for non-load bearing walls and partitions. Manufactured to meet industry standards for strength and durability.</p>
                         <p class="price">₱16</p>
                         <button class="btn btn-primary view-detail" data-name="CHM4''" data-price="₱16">View Detail</button>
@@ -162,7 +190,7 @@
                 <div class="card product-card">
                     <img src="assets/chm6.jpg" class="card-img-top product-image" alt="CHM6''">
                     <div class="card-body">
-                        <h5 class="card-title">CHM6''</h5>
+                        <h5 class="card-title">Concrete Hollow Blocks 6''</h5>
                         <p class="product-description">6-inch Concrete Hollow Blocks, perfect for load-bearing walls and structural applications. Provides excellent strength and sound insulation.</p>
                         <p class="price">₱22</p>
                         <button class="btn btn-primary view-detail" data-name="CHM6''" data-price="₱22">View Detail</button>
@@ -239,7 +267,7 @@
                 <div class="card product-card">
                     <img src="assets/opw1.jpg" class="card-img-top product-image" alt="OPW 1/4">
                     <div class="card-body">
-                        <h5 class="card-title">OPW 1/4</h5>
+                        <h5 class="card-title">Ordinary Plywood 1/4</h5>
                         <p class="product-description">1/4-inch Ordinary Plywood, suitable for general construction and backing applications. Cost-effective solution for non-exposed areas.</p>
                         <p class="price">₱380</p>
                         <button class="btn btn-primary view-detail" data-name="OPW 1/4" data-price="₱380">View Detail</button>
@@ -250,7 +278,7 @@
                 <div class="card product-card">
                     <img src="assets/mpw.jpg" class="card-img-top product-image" alt="MPW1/4">
                     <div class="card-body">
-                        <h5 class="card-title">MPW1/4</h5>
+                        <h5 class="card-title">Marine Plywood 1/4</h5>
                         <p class="product-description">1/4-inch Marine Plywood, water-resistant and ideal for areas exposed to moisture. Superior durability and weather resistance.</p>
                         <p class="price">₱480</p>
                         <button class="btn btn-primary view-detail" data-name="MPW1/4" data-price="₱480">View Detail</button>
@@ -261,7 +289,7 @@
                 <div class="card product-card">
                     <img src="assets/opw2.jpg" class="card-img-top product-image" alt="OPW1/2">
                     <div class="card-body">
-                        <h5 class="card-title">OPW1/2</h5>
+                        <h5 class="card-title">Ordinary Plywood 1/2</h5>
                         <p class="product-description">1/2-inch Ordinary Plywood, perfect for general construction and interior applications. Provides good strength and stability.</p>
                         <p class="price">₱720</p>
                         <button class="btn btn-primary view-detail" data-name="OPW1/2" data-price="₱720">View Detail</button>
@@ -272,10 +300,219 @@
                 <div class="card product-card">
                     <img src="assets/mpw2.jpg" class="card-img-top product-image" alt="MPW1/2">
                     <div class="card-body">
-                        <h5 class="card-title">MPW1/2</h5>
+                        <h5 class="card-title">Marine Plywood 1/2</h5>
                         <p class="product-description">1/2-inch Marine Plywood, highly durable and moisture-resistant. Ideal for exterior applications and wet areas.</p>
                         <p class="price">₱880</p>
                         <button class="btn btn-primary view-detail" data-name="MPW1/2" data-price="₱880">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/marine-plywood.jpg" class="card-img-top product-image" alt="Marine Plywood 3/4">
+                    <div class="card-body">
+                        <h5 class="card-title">Marine Plywood 3/4</h5>
+                        <p class="product-description">3/4-inch Marine Plywood, highly durable and moisture-resistant. Perfect for heavy-duty exterior applications.</p>
+                        <p class="price">₱1,450</p>
+                        <button class="btn btn-primary view-detail" data-name="Marine Plywood 3/4" data-price="₱1,450">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/layun.jpg" class="card-img-top product-image" alt="Layun">
+                    <div class="card-body">
+                        <h5 class="card-title">Layun</h5>
+                        <p class="product-description">Quality Layun material for construction needs.</p>
+                        <p class="price">₱100</p>
+                        <button class="btn btn-primary view-detail" data-name="Layun" data-price="₱100">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/tresera.jpg" class="card-img-top product-image" alt="Tresera">
+                    <div class="card-body">
+                        <h5 class="card-title">Tresera</h5>
+                        <p class="product-description">Standard Tresera material for construction purposes.</p>
+                        <p class="price">₱65</p>
+                        <button class="btn btn-primary view-detail" data-name="Tresera" data-price="₱65">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/bagat.jpg" class="card-img-top product-image" alt="Bagat">
+                    <div class="card-body">
+                        <h5 class="card-title">Bagat</h5>
+                        <p class="product-description">Quality Bagat material for your construction needs.</p>
+                        <p class="price">₱45</p>
+                        <button class="btn btn-primary view-detail" data-name="Bagat" data-price="₱45">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/pusog.jpg" class="card-img-top product-image" alt="Pusog">
+                    <div class="card-body">
+                        <h5 class="card-title">Pusog</h5>
+                        <p class="product-description">Standard Pusog material for construction applications.</p>
+                        <p class="price">₱45</p>
+                        <button class="btn btn-primary view-detail" data-name="Pusog" data-price="₱45">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/bitlag6.jpg" class="card-img-top product-image" alt="Bitlag 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Bitlag 6"</h5>
+                        <p class="product-description">6-inch Bitlag for construction projects.</p>
+                        <p class="price">₱80</p>
+                        <button class="btn btn-primary view-detail" data-name="Bitlag 6&quot;" data-price="₱80">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/bitlag8.jpg" class="card-img-top product-image" alt="Bitlag 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Bitlag 8</h5>
+                        <p class="product-description">8-inch Bitlag for construction projects.</p>
+                        <p class="price">₱90</p>
+                        <button class="btn btn-primary view-detail" data-name="Bitlag 8" data-price="₱90">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/phenolic-board-half.jpg" class="card-img-top product-image" alt="Phenolic Board 1/2">
+                    <div class="card-body">
+                        <h5 class="card-title">Phenolic Board 1/2</h5>
+                        <p class="product-description">1/2-inch Phenolic Board, durable and moisture-resistant.</p>
+                        <p class="price">₱970</p>
+                        <button class="btn btn-primary view-detail" data-name="Phenolic Board 1/2" data-price="₱970">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/phenolic-board-three-quarter.jpg" class="card-img-top product-image" alt="Phenolic Board 3/4">
+                    <div class="card-body">
+                        <h5 class="card-title">Phenolic Board 3/4</h5>
+                        <p class="product-description">3/4-inch Phenolic Board, extra strength and durability.</p>
+                        <p class="price">₱1,300</p>
+                        <button class="btn btn-primary view-detail" data-name="Phenolic Board 3/4" data-price="₱1,300">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/smartboard-3-16.jpg" class="card-img-top product-image" alt="Smartboard 3/16">
+                    <div class="card-body">
+                        <h5 class="card-title">Smartboard 3/16</h5>
+                        <p class="product-description">3/16-inch Smartboard for interior applications.</p>
+                        <p class="price">₱430</p>
+                        <button class="btn btn-primary view-detail" data-name="Smartboard 3/16" data-price="₱430">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/smartboard-quarter.jpg" class="card-img-top product-image" alt="Smartboard 1/4">
+                    <div class="card-body">
+                        <h5 class="card-title">Smartboard 1/4</h5>
+                        <p class="product-description">1/4-inch Smartboard for interior applications.</p>
+                        <p class="price">₱490</p>
+                        <button class="btn btn-primary view-detail" data-name="Smartboard 1/4" data-price="₱490">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/abc-tile-adhesive.jpg" class="card-img-top product-image" alt="ABC Tile Adhesive">
+                    <div class="card-body">
+                        <h5 class="card-title">ABC Tile Adhesive</h5>
+                        <p class="product-description">High-quality tile adhesive for secure tile installation.</p>
+                        <p class="price">₱350</p>
+                        <button class="btn btn-primary view-detail" data-name="ABC Tile Adhesive" data-price="₱350">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/island-skim-coat.jpg" class="card-img-top product-image" alt="Island Skim Coat">
+                    <div class="card-body">
+                        <h5 class="card-title">Island Skim Coat</h5>
+                        <p class="product-description">Professional-grade skim coat for smooth wall finishing.</p>
+                        <p class="price">₱550</p>
+                        <button class="btn btn-primary view-detail" data-name="Island Skim Coat" data-price="₱550">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/shovel.jpg" class="card-img-top product-image" alt="Shovel">
+                    <div class="card-body">
+                        <h5 class="card-title">Shovel</h5>
+                        <p class="product-description">Durable shovel for construction and gardening needs.</p>
+                        <p class="price">₱395</p>
+                        <button class="btn btn-primary view-detail" data-name="Shovel" data-price="₱395">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/pvc-pipe.jpg" class="card-img-top product-image" alt="Ordinary PVC Pipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Ordinary PVC Pipe</h5>
+                        <p class="product-description">High-quality PVC pipes available in various sizes for plumbing and construction needs.</p>
+                        <p class="price">From ₱134</p>
+                        <button class="btn btn-primary view-detail" data-name="Ordinary PVC Pipe" data-has-variants="true">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/atlanta-pvc-pipe.jpg" class="card-img-top product-image" alt="Atlanta PVC Pipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Atlanta PVC Pipe</h5>
+                        <p class="product-description">High-quality Atlanta PVC pipes available in various sizes for plumbing and construction needs.</p>
+                        <p class="price">From ₱390</p>
+                        <button class="btn btn-primary view-detail" data-name="Atlanta PVC Pipe" data-has-variants="true">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/atlanta-pvc-pipe.jpg" class="card-img-top product-image" alt="Atlanta PVC Pipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Ordinary PVC Blue Pipe</h5>
+                        <p class="product-description">High-quality Ordinary PVC Blue Pipe available in various sizes.</p>
+                        <p class="price">From ₱90</p>
+                        <button class="btn btn-primary view-detail" data-name="Ordinary PVC Blue Pipe" data-has-variants="true">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/atlanta-pvc-pipe.jpg" class="card-img-top product-image" alt="Atlanta PVC Blue Pipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Atlanta PVC Blue Pipe</h5>
+                        <p class="product-description">High-quality Atlanta PVC Blue Pipe available in various sizes.</p>
+                        <p class="price">From ₱90</p>
+                        <button class="btn btn-primary view-detail" data-name="Atlanta PVC Blue Pipe" data-has-variants="true">View Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="card product-card">
+                    <img src="assets/atlanta-pvc-pipe.jpg" class="card-img-top product-image" alt="Electrical Pipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Pipe</h5>
+                        <p class="product-description">High-quality Electrical Pipe available in various sizes.</p>
+                        <p class="price">From ₱145</p>
+                        <button class="btn btn-primary view-detail" data-name="Electrical Pipe" data-has-variants="true">View Detail</button>
                     </div>
                 </div>
             </div>
