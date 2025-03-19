@@ -523,3 +523,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Product search functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    function performSearch() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const products = document.querySelectorAll('.product-card');
+        const productContainer = document.getElementById('products-container');
+        
+        products.forEach(product => {
+            const productParent = product.parentElement;
+            const title = product.querySelector('.card-title').textContent.toLowerCase();
+            const description = product.querySelector('.product-description').textContent.toLowerCase();
+            const price = product.querySelector('.price').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || description.includes(searchTerm) || price.includes(searchTerm)) {
+                productParent.style.display = '';
+                // Reset the order for visible items
+                productParent.style.order = '0';
+            } else {
+                productParent.style.display = 'none';
+                // Move hidden items to the end
+                productParent.style.order = '1';
+            }
+        });
+
+        // Force grid layout refresh
+        productContainer.style.display = 'none';
+        productContainer.offsetHeight; // Force reflow
+        productContainer.style.display = 'flex';
+    }
+
+    // Search on input change
+    searchInput.addEventListener('keyup', performSearch);
+    
+    // Search on button click
+    searchButton.addEventListener('click', performSearch);
+});

@@ -99,9 +99,19 @@
                 </a>
                 <h1 class="text-center mb-4">Our Supplies</h1>
                 <!-- Category Filters -->
+                <!-- After the category filters div -->
                 <div class="text-center mb-4">
                     <div class="btn-group">
                         <button class="btn btn-primary active" data-category="all">All Items</button>
+                    </div>
+                </div>
+                <!-- Add search functionality -->
+                <div class="text-center mb-4">
+                    <div class="input-group w-50 mx-auto">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search products...">
+                        <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -137,8 +147,8 @@
                     <div class="card-body">
                         <h5 class="card-title">3/4 Gravel</h5>
                         <p class="product-description">3/4 inch sized gravel, perfect for concrete mixing and construction. Ideal for driveways, pathways, and general construction applications. Provides excellent drainage and structural support.</p>
-                        <p class="price">₱1,200</p>
-                        <button class="btn btn-primary view-detail" data-name="3/4 Gravel" data-price="₱1,200">View Detail</button>
+                        <p class="price">₱1,300</p>
+                        <button class="btn btn-primary view-detail" data-name="3/4 Gravel" data-price="₱1,300">View Detail</button>
                     </div>
                 </div>
             </div>
@@ -323,7 +333,9 @@
                     <img src="assets/tresera.jpg" class="card-img-top product-image" alt="Tresera">
                     <div class="card-body">
                         <h5 class="card-title">Tresera</h5>
-                        <p class="product-description">Standard Tresera material for construction purposes.</p>
+                        <!-- Update Tresera description -->
+                        <p class="product-description">Heavy-duty Tresera material, ideal for structural support in construction. Perfect for framework and load-bearing applications.</p>
+
                         <p class="price">₱65</p>
                         <button class="btn btn-primary view-detail" data-name="Tresera" data-price="₱65">View Detail</button>
                     </div>
